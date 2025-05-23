@@ -1,0 +1,396 @@
+/* Базовые стили Википедии */
+body {
+    font-family: 'Georgia', serif;
+    background: #f8f9fa;
+    line-height: 1.6;
+    margin-left: 11rem; /* Отступ для сайдбара */
+}
+
+/* Боковая панель */
+.wiki-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 11rem;
+    background: #f6f6f6;
+    border-right: 1px solid #a7d7f9;
+    padding: 1rem 0;
+}
+
+.wiki-logo {
+    width: 80%;
+    display: block;
+    margin: 0 auto 1.5rem;
+    border-radius: 60px;
+}
+
+.sidebar-menu li {
+    list-style: none;
+    margin: 0.3rem 0;
+}
+
+.sidebar-menu a {
+    color: #0645ad;
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.sidebar-menu a:hover {
+    background: #eaf3ff;
+}
+
+.sidebar-menu i {
+    width: 1.5rem;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+/* Шапка в стиле Википедии */
+.main-header {
+    background: #fff;
+    border-bottom: 1px solid #a7d7f9;
+    padding: 1rem 2rem;
+    margin-left: 11rem;
+}
+
+.logo {
+    font-family: 'Linux Libertine', Georgia, Times, serif;
+    font-size: 2rem;
+    color: #000;
+    border-bottom: 1px solid #a7d7f9;
+    padding-bottom: 0.3rem;
+}
+
+/* Сетка людей */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.person-card {
+    background: #fff;
+    border: 1px solid #a7d7f9;
+    padding: 1rem;
+    border-radius: 3px;
+    transition: box-shadow 0.2s;
+}
+
+.person-card:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Стили ссылок */
+.wiki-link {
+    color: #0645ad;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.wiki-link:hover {
+    border-bottom-color: #0645ad;
+}
+
+/* Инфобоксы как в Википедии */
+.infobox {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    float: right;
+    margin: 0 0 1rem 1rem;
+    padding: 0.8rem;
+    width: 250px;
+}
+
+.infobox-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .wiki-sidebar {
+        width: 250px;
+        background: #fff;
+        box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .sidebar-active {
+        overflow: hidden; /* Блокируем скролл при открытом меню */
+    }
+}
+
+/* Стили статьи */
+.wiki-article {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.article-title {
+    font-family: 'Linux Libertine', Georgia, serif;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Содержание */
+.toc {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 1rem;
+    float: right;
+    width: 300px;
+    margin: 1rem 0 1rem 1rem;
+}
+
+.toc ul {
+    padding-left: 1.5rem;
+}
+
+/* Изображения в статье */
+.article-image {
+    margin: 0.5rem 1rem 1rem 0;
+    background: #fff;
+    border: 1px solid #c8ccd1;
+    padding: 0.5rem;
+}
+
+.article-image.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #54595d;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Списки */
+.wiki-list {
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+.wiki-list li {
+    margin: 0.5rem 0;
+}
+
+/* Цитаты */
+.wiki-quote {
+    background: #f8f9fa;
+    border-left: 4px solid #a2a9b1;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* Футер */
+.wiki-footer {
+    border-top: 1px solid #a2a9b1;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .toc {
+        float: none;
+        width: auto;
+        margin: 1rem 0;
+    }
+
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.mobile-nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.mobile-nav a {
+    color: #0645ad;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .wiki-sidebar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    body {
+        margin-left: 0;
+        padding-bottom: 60px; /* Отступ для мобильного меню */
+    }
+}
+
+/* Добавьте эти стили в style.css */
+.person-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.person-avatar {
+    width: 100%;
+    height: 200px; /* Максимальная высота */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    aspect-ratio: 1/1; /* Сохраняем квадратную форму */
+}
+
+@media (max-width: 768px) {
+    .person-avatar {
+        height: 150px;
+    }
+}
+
+/* Стили для инфобокса */
+.infobox {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    float: right;
+    margin: 0 0 1rem 1rem;
+    padding: 1rem;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.infobox-title {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.infobox-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.infobox-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.infobox-table th,
+.infobox-table td {
+    padding: 0.4rem 0.5rem;
+    vertical-align: top;
+}
+
+.infobox-table th {
+    text-align: left;
+    width: 40%;
+    font-weight: normal;
+    color: #54595d;
+}
+
+.infobox-table td {
+    font-weight: 500;
+}
+
+/* Флаги */
+.country-flags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.flag-emoji {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .infobox-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Стили для раздела "Личная жизнь" */
+#personal-life h3 {
+    color: #2a4b8d;
+    margin: 1.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.hobby-card {
+    background: #f8f9fa;
+    border: 1px solid #e1e4e8;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.hobby-card:hover {
+    transform: translateY(-3px);
+}
+
+.hobby-card i {
+    font-size: 2rem;
+    color: #0066cc;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.hobby-card span {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Друзья Вики</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="main-header">
+        <h1 class="logo">Друзья Вики</h1>
+    </header>
+
+    <nav class="mobile-nav">
+    <ul>
+        <li><a href="#people">Люди</a></li>
+        <li><a href="#other">Прочее</a></li>
+        <li><a href="#about">О проекте</a></li>
+    </ul>
+</nav>
+
+    <nav class="wiki-sidebar">
+    <div class="sidebar-content">
+        <a href=""><img src="img/derevnya-logo.jpg" alt="Лого" class="wiki-logo"></a>
+        <ul class="sidebar-menu">
+            <li><a href="#"><i class="fas fa-home"></i>Главная</a></li>
+            <li><a href="#people"><i class="fas fa-users"></i>Музыка</a></li>
+            <li><a href="#other"><i class="fas fa-asterisk"></i>Прочее</a></li>
+            <li class="separator"></li>
+            <li><a href="#"><i class="fas fa-file-alt"></i>Правила</a></li>
+            <li><a href="#"><i class="fas fa-images"></i>Галерея</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Основной контент -->
+    <main class="container">
+        <!-- Блок "Люди" -->
+        <section class="people-section">
+            <h2>Люди</h2>
+            <div class="people-grid" id="peopleGrid"></div>
+        </section>
+
+        <!-- Блок "Прочее" -->
+        <section class="other-section">
+            <h2>Прочее</h2>
+            <div class="other-links">
+                <a href="pages/rules.html" class="wiki-link">Правила сообщества</a>
+                <a href="pages/events.html" class="wiki-link">Наши события</a>
+                <a href="pages/gallery.html" class="wiki-link">Галерея</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Мобильное меню -->
+    <nav class="mobile-menu">
+        <a href="#people">Люди</a>
+        <a href="#other">Прочее</a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
