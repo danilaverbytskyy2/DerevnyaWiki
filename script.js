@@ -38,6 +38,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }));
 
         friends[0].name = 'Даня';
+        friends[1].name = 'Полина';
+        friends[2].name = 'Владик';
+        friends[3].name = 'Диана';
+        friends[4].name = 'Тимур';
+        friends[5].name = 'Оксана';
+        friends[6].name = 'Егор';
+        friends[7].name = 'Марго';
+        friends[8].name = 'Last.fm';
+        friends[9].name = 'Поля';
+        friends[10].name = 'Коля';
+        friends[11].name = 'Андрей';
+        friends[12].name = 'Ваня';
+        friends[13].name = 'Лана';
+        friends[14].name = 'Диана';
+        friends[15].name = 'Матвей';
+        friends[16].name = 'Сабина';
+        friends[17].name = 'Юля';
 
         peopleGrid.innerHTML = friends.map(f => `
             <a href="pages/friend-${f.id}.html" class="person-card">
