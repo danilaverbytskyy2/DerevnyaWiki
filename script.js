@@ -5,6 +5,7 @@ const friends = Array.from({length: 18}, (_, i) => ({
     name: `Друг ${i+1}`,
     avatar: 'img/placeholder-avatar.jpg'
 }));
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
 function generatePersonCard(friend) {
     return `

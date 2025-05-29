@@ -399,3 +399,19 @@ figcaption {
   max-width: 100%;
   height: auto;
 }
+
+.wiki-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #a2a9b1;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #54595d;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .wiki-footer {
+        padding-bottom: 4rem; /* Учитываем мобильное меню */
+    }
+}
