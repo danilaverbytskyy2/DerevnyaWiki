@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const friends = Array.from({length: 18}, (_, i) => ({
             id: i+1,
             name: `Друг ${i+1}`,
-            avatar: `./img/friend-${i+1}.jpg`
+            avatar: `img/friend-${i+1}.jpg`
         }));
 
         friends[0].name = 'Даня';
