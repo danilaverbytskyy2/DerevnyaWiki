@@ -53,7 +53,7 @@ body {
     background: #fff;
     border-bottom: 1px solid #a7d7f9;
     padding: 1rem 2rem;
-    margin-left: 11rem;
+    margin-left: 0rem;
 }
 
 .logo {
@@ -403,7 +403,7 @@ figcaption {
 .wiki-footer {
     background: #f8f9fa;
     border-top: 1px solid #a2a9b1;
-    padding: 1.5rem;
+    padding-top: 1.5rem;
     text-align: center;
     font-size: 0.9rem;
     color: #54595d;
